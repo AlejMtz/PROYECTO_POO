@@ -19,6 +19,10 @@ def acercade():
 def n_producto():
  return render_template('n_producto.html')
 
+@app.route('/g_producto')
+def g_producto():
+ return render_template('g_producto.html')
+
 @app.route('/n_cliente')
 def n_cliente():
  return render_template('n_cliente.html')
