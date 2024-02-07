@@ -15,9 +15,12 @@ def acercade():
   #return 'Muestra informacion acerca del proyecto'
  return render_template('acerca.html')
 
+@app.route('/n_producto')
+def n_producto():
+ return render_template('n_producto.html')
+
 @app.route('/n_cliente')
 def n_cliente():
-  #return 'Muestra informacion acerca del proyecto'
  return render_template('n_cliente.html')
 
 #ACTIVAR LA VALIDACION PARA QUE LA PAGINA SE QUEDE EJECUTANDO EN EL SERVIDOR

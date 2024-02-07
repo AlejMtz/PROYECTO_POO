@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <title>Interfaz Principal</title>
     <style>
         body {
@@ -21,21 +23,21 @@
             height: 100%;
             background: url('/static/iconos/fondo.jpg') no-repeat center center fixed;
             background-size: cover;
-            filter: brightness(70%); 
-            z-index: -1; 
+            filter: brightness(70%);
+            z-index: -1;
         }
 
         header {
             background-color:#333;
             color: white;
-            padding: 10px;
+            padding: 30px;
             text-align: center;
             z-index: 1; 
         }
 
         nav {
             background-color: #eee;
-            padding: 10px;
+            padding: 20px;
             display: flex;
             justify-content: center;
             z-index: 1; 
@@ -90,44 +92,88 @@
         .dropdown-content a:hover {
             background-color: rgba(169, 169, 169, 0.3); 
         }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>FERRETERIA "MSY"</h1>
+<header class="bg-dark">
+    <h1 class="text-white">FERRETERIA "MSY"</h1>
 </header>
 
-<nav>
-    <div class="dropdown">
-        <a href="#" onclick="mostrarContenido('productos')">Productos</a>
-        <div class="dropdown-content">
-            <a href="#">Nuevo Producto</a>
-            <a href="#">Gestionar Producto</a>
-            <a href="#">Actualizar Stock</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/n_producto">Nuevo Producto</a></li>
+                        <li><a class="dropdown-item" href="#">Gestionar Producto</a></li>
+                        <li><a class="dropdown-item" href="#">Actualizar Stock</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cliente
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Nuevo Cliente</a></li>
+                        <li><a class="dropdown-item" href="#">Gestionar Cliente</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Proveedor
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Nuevo Proveedor</a></li>
+                        <li><a class="dropdown-item" href="#">Gestionar Proveedor</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Usuario
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Nuevo Usuario</a></li>
+                        <li><a class="dropdown-item" href="#">Gestionar Usuario</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ventas
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Nueva Venta</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Reportes
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Reporte Producto</a></li>
+                        <li><a class="dropdown-item" href="#">Reporte Clientes</a></li>
+                        <li><a class="dropdown-item" href="#">Reporte Proveedores</a></li>
+                        <li><a class="dropdown-item" href="#">Reporte Ventas</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Salir
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
-    
-    <div class="dropdown">
-        <a href="#" onclick="mostrarContenido('cliente')">Cliente</a>
-        <div class="dropdown-content">
-            <a href="#">Nuevo Cliente</a>
-            <a href="#">Gestionar Cliente</a>
-        </div>
-    </div>
-
-    <div class="dropdown">
-        <a href="#" onclick="mostrarContenido('cliente')">Proveedor</a>
-        <div class="dropdown-content">
-            <a href="#">Nuevo Proveedor</a>
-            <a href="#">Gestionar Proveedor</a>
-        </div>
-    </div>    
-    
-    <a href="#" onclick="mostrarContenido('usuario')">Usuario</a>
-    <a href="#" onclick="mostrarContenido('ventas')">Ventas</a>
-    <a href="#" onclick="mostrarContenido('Reportes')">Reportes</a>
-    <a href="#" onclick="mostrarContenido('salir')">SALIR</a>
 </nav>
 
 <div class="content">
