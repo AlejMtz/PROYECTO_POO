@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Cliente</title>
+    <link rel="icon" href="C:/Users/samar/Downloads/cliente.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lavender;
+        }
+
+        .titulo {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .datos {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .entrada {
+            width: 60%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 5px;
+            border: none;
+            background-color: lavender;
+        }
+
+        .boton {
+            font-size: 12px;
+            font-weight: bold;
+            height: 2em;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="ventana_Ges_Prod">
+        <div class="titulo">Nuevo Cliente</div>
+        <div class="datos">Nombre Cliente:</div>
+        <input type="text" class="entrada" id="r_nombre">
+        <div class="datos">Apellido Cliente:</div>
+        <input type="text" class="entrada" id="r_apellido">
+        <div class="datos">RFC:</div>
+        <input type="text" class="entrada" id="r_rfc">
+        <div class="datos">Teléfono:</div>
+        <input type="text" class="entrada" id="r_telefono">
+        <div class="datos">Dirección:</div>
+        <input type="text" class="entrada" id="r_direccion">
+        <button class="boton" onclick="guardar()">Guardar</button>
+    </div>
+
+    <script>
+        function guardar() {
+            // Implementa la lógica de guardado en JavaScript si es necesario
+            alert("Guardado exitoso");
+        }
+    </script>
+</body>
+</html>

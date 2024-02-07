@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/static/iconos/fondo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: brightness(70%); 
+            z-index: -1; 
+        }
+
+        header {
+            background-color:#333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 1; 
+        }
+
+        nav {
+            background-color: #eee;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            z-index: 1; 
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            margin: 0 10px;
+            border-bottom: 2px solid transparent;
+            transition: background-color 0.3s; 
+        }
+
+        nav a:hover {
+            background-color: rgba(169, 169, 169, 0.3); 
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            color: white;
+            z-index: 1; 
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #eee;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            font-size: 14px; 
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s; 
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(169, 169, 169, 0.3); 
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>FERRETERIA "MSY"</h1>
+</header>
+
+<nav>
+    <div class="dropdown">
+        <a href="#" onclick="mostrarContenido('productos')">Productos</a>
+        <div class="dropdown-content">
+            <a href="#">Nuevo Producto</a>
+            <a href="#">Gestionar Producto</a>
+            <a href="#">Actualizar Stock</a>
+        </div>
+    </div>
+    <a href="#" onclick="mostrarContenido('cliente')">Cliente</a>
+    <a href="#" onclick="mostrarContenido('proveedor')">Proveedor</a>
+    <a href="#" onclick="mostrarContenido('usuario')">Usuario</a>
+    <a href="#" onclick="mostrarContenido('ventas')">Ventas</a>
+    <a href="#" onclick="mostrarContenido('Reportes')">Reportes</a>
+    <a href="#" onclick="mostrarContenido('salir')">SALIR</a>
+</nav>
+
+<div class="content">
+    <p></p>
+</div>
+
+</body>
+</html>
