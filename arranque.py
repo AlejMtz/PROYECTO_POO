@@ -35,6 +35,10 @@ def g_cliente():
 def n_proveedor():
  return render_template('n_proveedor.html')
 
+@app.route('/g_proveedor')
+def g_proveedor():
+ return render_template('g_proveedor.html')
+
 #ACTIVAR LA VALIDACION PARA QUE LA PAGINA SE QUEDE EJECUTANDO EN EL SERVIDOR
 if __name__ == '__main__':
     app.run(debug=True)
