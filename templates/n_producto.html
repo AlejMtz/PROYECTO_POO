@@ -94,6 +94,21 @@
             box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
         }
 
+        .btn-back {
+            background-color: rgb(225, 51, 51);
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px; 
+            margin-left: 20px;
+        }
+        .img-back {
+            width: 30px;
+            height: 30px;
+        }
+
     </style>
 </head>
 <body>
@@ -101,6 +116,10 @@
 <header class="bg-dark">
     <h1 class="text-white">FERRETERIA "MSY"</h1>
 </header>
+
+<div>
+    <button class="btn-back" type="button" onclick="regresar()"><img src="../static/iconos/back.png" class="img-back"></button>
+</div>
 
 <form>
     <h2>Nuevo Producto</h2>
@@ -125,6 +144,13 @@
 
     <button class="btn-save" type="submit">Guardar</button>
 </form>
+
+<!--FUNCION PARA REGRESAR-->
+<script>
+    function regresar(){
+        window.history.back();
+    }
+</script>
 
 </body>
 </html>
