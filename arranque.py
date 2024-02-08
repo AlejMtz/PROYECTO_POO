@@ -39,9 +39,19 @@ def n_proveedor():
 def g_proveedor():
  return render_template('g_proveedor.html')
 
+<<<<<<< HEAD
 @app.route('/n_venta')
 def n_venta():
  return render_template('n_venta.html')
+=======
+@app.route('/n_usuario')
+def n_usuario():
+ return render_template('n_usuario.html')
+
+@app.route('/g_usuario')
+def g_usuario():
+ return render_template('g_usuario.html')
+>>>>>>> 722a59b04c3d4db22d4cb38c2599861a8565c6d4
 
 #ACTIVAR LA VALIDACION PARA QUE LA PAGINA SE QUEDE EJECUTANDO EN EL SERVIDOR
 if __name__ == '__main__':
