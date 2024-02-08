@@ -39,6 +39,14 @@ def n_proveedor():
 def g_proveedor():
  return render_template('g_proveedor.html')
 
+@app.route('/n_usuario')
+def n_usuario():
+ return render_template('n_usuario.html')
+
+@app.route('/g_usuario')
+def g_usuario():
+ return render_template('g_usuario.html')
+
 #ACTIVAR LA VALIDACION PARA QUE LA PAGINA SE QUEDE EJECUTANDO EN EL SERVIDOR
 if __name__ == '__main__':
     app.run(debug=True)

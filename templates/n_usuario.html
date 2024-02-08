@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Registro de Usuarios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/static/iconos/fondo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: brightness(70%);
+            z-index: -1;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            z-index: 1; 
+        }
+
+        form {
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 10px;
+            width: 40%;
+            z-index: 1;
+            text-align: center; 
+            margin: 20px auto; 
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            color: black; 
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0;
+            text-align: left; 
+        }
+
+        form #nombre, #apellido {
+            width: 60%; 
+        }
+
+        form #direccion {
+            width: 70%; 
+        }
+
+        .btn-save {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px; 
+        }
+
+        .btn-save:hover {
+            background-color:tan;
+        }
+
+        .btn-back {
+            background-color: rgb(225, 51, 51);
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px; 
+            margin-left: 20px;
+        }
+        .img-back {
+            width: 30px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header class="bg-dark">
+    <h1 class="text-white">FERRETERIA "MSY"</h1>
+</header>
+
+<div>
+    <button class="btn-back" type="button" onclick="regresar()"><img src="../static/iconos/back.png" class="img-back"></button>
+</div>
+
+<form>
+    <h2>Nuevo Usuario</h2>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" required>
+
+    <label for="telefono">Telefono:</label>
+    <input type="number" id="telefono" name="telefono" step="1" required>
+
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" required>
+
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" name="usuario" required>
+
+    <label for="contraseña">contraseña:</label>
+    <input type="password" id="contraseña" name="contraseña" required>
+
+    <button class="btn-save" type="submit">Guardar</button>
+</form>
+
+<!--FUNCION PARA REGRESAR-->
+<script>
+    function regresar(){
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>

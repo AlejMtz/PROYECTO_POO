@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Gestión de Clientes</title>
+    <title>Gestión de Usuarios</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -133,38 +133,42 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <h2>Listado de Productos</h2>
+            <h2>Listado de Usuarios</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>No. Cliente</th>
+                        <th>No. Usuario</th>
                         <th>Nombre</th>
-                        <th>Apellido</th>
+                        <th>Apellidos</th>
                         <th>Telefono</th>
                         <th>Dirección</th>
+                        <th>Usuario</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Cliente A</td>
+                        <td>Usuario A</td>
                         <td>Gomez</td>
                         <td>5202634250</td>
                         <td>Almoloya </td>
+                        <td>A</td>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>Cliente A</td>
+                        <td>2</td>
+                        <td>Usuario A</td>
                         <td>Gomez</td>
                         <td>5202634250</td>
                         <td>Almoloya </td>
+                        <td>A</td>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>Cliente A</td>
+                        <td>3</td>
+                        <td>Usuario A</td>
                         <td>Gomez</td>
                         <td>5202634250</td>
                         <td>Almoloya </td>
+                        <td>A</td>
                     </tr>
                 </tbody>
             </table>
@@ -174,15 +178,15 @@
 
         
         <div class="col-md-6 form-container">
-            <h2>Actualizar Cliente</h2>
+            <h2>Actualizar Usuario</h2>
             <form>
                 <div class="mb-3">
                     <label for="nombre">Nombre:</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" required>
                 </div>
                 <div class="mb-3">
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" class="form-control" id="apellido" name="apellido" required>
+                    <label for="Apellidos">Apellidos:</label>
+                    <input type="text" class="form-control" id="apellidos" name="apellidos" required>
                 </div>
                 <div class="mb-3">
                     <label for="telefono">Telefono:</label>
@@ -191,6 +195,14 @@
                 <div class="mb-3">
                     <label for="direccion">Dirección:</label>
                     <input type="text" class="form-control" id="direccion" name="direccion" required>
+                </div>
+                <div class="mb-3">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" class="form-control" id="usuario" name="usuario" required>
+                </div>
+                <div class="mb-3">
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" class="form-control" id="contraseña" name="contraseña" required>
                 </div>
                 <button type="submit" class="btn btn-primary btn-save">Guardar</button>
             </form>
