@@ -122,7 +122,6 @@
             height: 30px;
         }
 
-        
     </style>
 </head>
 <body>
@@ -145,30 +144,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Producto A</td>
-                        <td>10</td>
-                        <td>$20.00</td>
-                        <td>Descripción del Producto </td>
-                        <td>Proveedor </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Producto A</td>
-                        <td>10</td>
-                        <td>$20.00</td>
-                        <td>Descripción del Producto </td>
-                        <td>Proveedor </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Producto A</td>
-                        <td>10</td>
-                        <td>$20.00</td>
-                        <td>Descripción del Producto </td>
-                        <td>Proveedor </td>
-                    </tr>
+                    {% for item in inventario %}
+                        <tr>
+                            <td>{{ item['Nombre'] }}</td>
+                            <td>{{ item['cantidad'] }}</td>
+                            <td>{{ item['precio'] }}</td>
+                            <td>{{ item['descripcion'] }}</td>
+                            <td>{{ item['proveedor'] }}</td>
+                        </tr>
+                    {% endfor %}
                 </tbody>
             </table>
             <button class="btn btn-danger btn-delete">Eliminar</button>
