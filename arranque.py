@@ -19,7 +19,7 @@ def n_producto():
 
 @app.route('/g_producto')
 def g_producto():
- return render_template('g_producto.html')
+    return render_template('g_producto.html', inventario=inventario)
 
 @app.route('/n_cliente')
 def n_cliente():
@@ -65,7 +65,7 @@ def procesar_producto():
         'proveedor': proveedor
     })
 
-    return render_template('n_producto.html', inventario=inventario)
+    return render_template('g_producto.html', inventario=inventario)
 
 
 #ACTIVAR LA VALIDACION PARA QUE LA PAGINA SE QUEDE EJECUTANDO EN EL SERVIDOR
