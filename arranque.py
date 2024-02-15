@@ -7,6 +7,8 @@ from flask import Flask,render_template, request
 app = Flask(__name__)#nos permite crear las rutas para las diferentes paginas del sitio web
 
 inventario = []
+clientes = []
+proveedores = []
 
 @app.route('/')
 def inicio():
@@ -66,6 +68,38 @@ def procesar_producto():
     })
 
     return render_template('g_producto.html', inventario=inventario)
+
+@app.route('/n_cliente', methods=['POST'])
+def procesar_cliente():
+    nombre = request.form['nombre']
+    apellido = request.form['apellido']
+    rfc = request.form['rfc']
+    telefono = int(request.form['telefono'])
+    direccion = request.form['direccion']
+
+    clientes.append({
+        'nombre': nombre,
+        'apellido': apellido,
+        'rfc': rfc,
+        'telefono': telefono,
+        'direccion': direccion
+    })
+
+    return render_template('g_cliente.html', clientes=clientes)
+
+@app.route('/n_proveedor', methods=['POST'])
+def procesar_proveedor():
+    nombre = request.form['nombre']
+    telefono = int(request.form['telefono'])
+    direccion = request.form['direccion']
+
+    proveedores.append({
+        'nombre': nombre,
+        'telefono': telefono,
+        'direccion': direccion
+    })
+
+    return render_template('g_proveedor.html', proveedores=proveedores)
 
 
 #ACTIVAR LA VALIDACION PARA QUE LA PAGINA SE QUEDE EJECUTANDO EN EL SERVIDOR
